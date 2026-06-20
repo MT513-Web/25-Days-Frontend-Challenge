@@ -1,26 +1,71 @@
-<!--Core HTML Tags Basics
-headings <h1, h2, h3, h4, h5, h6> used to define headings and subheadings in a webpage. They range from h1 (most imp) to h6 (least imp).
-paragraphs <p> used to define a block of text as a paragraph.
-<img> used to embed images in a webpage. It requires the "src" attribute to specify the image source and "alt" attribute for alternative text.-->
-<!-- 
-GET Method: Used to request data from a server; form data is visible in the page URL.
-POST Method: Used to send sensitive data to a server; form data is hidden inside the request body.
--->
+<!--Core HTML Tags Basics & Highlights (Modules 01 to 13)
+- Headings <h1> to <h6>: Used to define structure. <h1> is most important/largest, <h6> is least important/smallest.
+- Paragraphs <p>: Defines a block of text as a paragraph.
+- Images <img>: Empty tag. Requires "src" for image source, "alt" for screen readers/broken links, and "width"/"height".
+- Links <a>: Used for hyperlinks. Requires the "href" attribute to specify the destination URL.
+- GET Method: Used to request data from a server; form data is appended to the URL and visible to the user.
+- POST Method: Used to send sensitive data to a server; form data is hidden securely inside the request body.
+- Dynamic URL: Contains query parameters sent in key=value pairs, separated by characters like ?, &, %, and =.
+- Front-End Developer: Stands between the designer and back-end developer; ensures content rendering & interaction.
+- Formatting Tags: <b>/<i> for basic bold/italic, <strong>/<em> for semantic importance/emphasis, <mark> to highlight.
+- Quotation Tags: <q> for short quotes (adds inline quotes automatically), <blockquote> for long quotes (indents text).
+- Technical Data: <kbd> for keyboard keys, <code> for script logic, <samp> for machine output, <var> for math variables.
+- HTML5 Conventions: Recommends lowercase tags/attributes and mandatory quotes around values for cleaner structures.-->>
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>CS202 Day 1 practice</title>
 </head>
-<body>
-    <h1>Main Heading h1 - Welcome Ayesha!</h1>
-    <h2>Subheading h2 - Day 1 of 25</h2>
+<body style="background-color: bisque;">
+    <h1 style="color:blueviolet;">Main Heading h1 - Welcome Ayesha!</h1>
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Subheading h2 - Day 1 of 25</h2>
 
-    <p>Paragraph - I'm a BSCS student at Virtual University.</p>
+    <p>Paragraph - I'm a <b>BSCS</b> student at <i>Virtual University</i>.</p>
+    <p>We are learnig <strong>Front-End Development</strong> with <em style="color: rgb(10, 61, 44);"> deep focus </em>.</p>
+    <p>This is a <small>small text</small> and this is a <mark>marked/highlighted text</mark>.</p>
+     
+     <hr>
+    
+    <!-- Links and Images with Alt attribute -->
+     <a href="https://www.google.com" target="_blank">Visit Google</a>
+     <br><br>
     <img src="https://img.freepik.com/premium-vector/cute-muslim-girl-hijab-using-laptop-sitting-couch-vector-illustration-cartoon-style_1312241-35.jpg" width="250" alt="img.1">
+     
+    <hr>
+
+    <!-- Quotations, Address and Abbreviations -->
+    <p>WWF Web says: <q>Short quote here</q></p>
+    <p>The acronym <abbr title="HyperText Markup Language">HTML</abbr> is easy to learn.</p>
+
+    <blockquote>
+        The front end developer stands between the designer on one end and the back end developer on the other.
+    </blockquote>
+
+
+    <address>
+        Written by Ayesha Afzal.<br>
+        Virtual University of Pakistan
+    </address>
+
+    <!-- Computer Code and Variables -->
+    <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your file in VS Code.</p>
+    <p>Sample Output: <samp>File Uploaded Successfully</samp></p>
+    <p>Code syntax: <code>var x = 10;</code></p>
+    <p>Equation: <var>E</var> = <var>m</var><var>c</var><sup>2</sup></p>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,84 @@
+<!--Core HTML Advanced Elements & Forms (Day 2 Summary)
+- Tables: Constructed using <table>, <tr>, <td>, and <th>. <caption> adds a table title.
+- colspan & rowspan: Attributes used to span cells across multiple columns or rows respectively.
+- Lists: <ul> for bulleted items, <ol> for numbered sequences, and <dl> for definition terms (<dt>/<dd>).
+- Block vs Inline: <div> is a block element (starts on a new line), <span> is inline (stays on the same line).
+- <iframe>: Used to embed another external document or webpage inside the current HTML file.
+- Forms: Created via <form>. Inputs include type="text" and type="radio" (for single selection).
+- fieldset & legend: <fieldset> groups related form fields in a box, <legend> provides its caption.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS202 Day 2 Practice - Advanced HTML</title>
+</head>
+<body style="background-color:bisque;">
+
+    <h1>Day 2: Advanced Elements, Layouts & Forms</h1>
+    <hr>
+
+    <!-- 1. Table with colspan and rowspan -->
+    <h3>Student Progress Table</h3>
+    <table border="1" style="width: 50%; border-collapse: collapse;">
+        <caption><b>Final Term Weightage</caption>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Contact Numbers</th>
+        </tr>
+        <tr>
+            <td>Ayesha Afzal</td>
+            <td>0300-1234567</td>
+            <td>0321-7654321</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- 2. Block vs Inline (div vs span) -->
+    <h3>Block vs Inline Demonstration</h3>
+    <div style="background-color: lightblue; padding: 5px;">
+        This is a DIV block. It occupies the whole line.
+    </div>
+    <p>This is a paragraph containing a <span style="color: red; font-weight: bold;">SPAN element</span> which stays inline.</p>
+
+    <hr>
+
+    <!-- 3. HTML Lists -->
+    <h3>Course Modules List</h3>
+    <ul style="list-style-type: square;">
+        <li>HTML5 Basics</li>
+        <li>CSS3 Styling</li>
+    </ul>
+
+    <ol type="I">
+        <li>JavaScript Fundamentals</li>
+        <li>JQuery DOM Manipulation</li>
+    </ol>
+
+    <hr>
+
+    <!-- 4. HTML Forms with fieldset and legend -->
+    <form action="action_page.php" method="POST">
+        <fieldset>
+            <legend>Personal Information:</legend>
+            
+            First Name:<br>
+            <input type="text" name="firstname" value="Ayesha"><br><br>
+            
+            Gender:<br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female" checked> Female<br><br>
+            
+            <input type="submit" value="Submit Data">
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <!-- 5. iFrame Embedding -->
+    <h3>Embedded Document (iFrame)</h3>
+    <iframe src="https://google.com/200" width="250" height="150" style="border:none;"></iframe>
+
+</body>
+</html> 

@@ -1,0 +1,76 @@
+<!--Core HTML Colors, XHTML Rules & CSS Basics (Day 3 Summary)
+- Colors: Can be specified via names (red), RGB values (rgb(255,0,0)), or Hexadecimal codes (#FF0000).
+- Head Metadata: <head> contains <title> (required), <style> (internal CSS), <link> (external CSS), and <meta>.
+- charset="UTF-8": Defines the standard character encoding in HTML5 covering almost all world characters.
+- Entities: Used for reserved characters. &lt; is for <, &gt; is for >, and &nbsp; is a non-breaking space.
+- URL Encoding: Converts non-ASCII characters and spaces into ASCII format (e.g., spaces become %20).
+- XHTML Strict Rules: Elements must be lowercase, properly nested, strictly closed (<br />), and attributes quoted.
+- CSS Syntax: Consists of a selector and a declaration block: selector { property: value; }.
+- CSS Selectors: .class styles elements with matching class; #id styles a single unique element with matching ID.
+- CSS Insertion: Three ways to apply style: External via <link>, Internal via <style>, and Inline via style attribute.
+- CSS Backgrounds & Fonts: background-image sets backgrounds; font-family handles fallback structures using comma lists.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--> Character Encoding -->
+    <title> Day 3 Practice - HTML Colors & CSS Basics</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        /* CSS Comment Style */
+        body {
+            background-color: rgb(140, 170, 140); /* RGB Color */
+        }
+        
+        /* Element Selector */
+        h1 {
+            color: #0000FF; /* Hex Color Blue */
+            text-align: center;
+        }
+
+        /* Class Selector */
+        .custom-para {
+            font-family: "Times New Roman", Times, serif; /* Fallback System */
+            text-transform: capitalize; /* Text Transformation */
+        }
+
+        /* ID Selector  */
+        #unique-box {
+            background-color: #ffffff;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Day 3: Colors, XHTML Strictness & CSS Intro</h1>
+    <hr>
+
+    <!-- HTML Entities Practice  -->
+    <h3>1. HTML Entities & Symbols</h3>
+    <p>In HTML, 5 &lt; 10 is true, and 20 &gt; 15 is also true.</p>
+    <p>This text has a real&nbsp;&nbsp;&nbsp;&nbsp;non-breaking space between words.</p>
+
+    <hr>
+
+    <!-- XHTML Rule Demonstration -->
+    <h3>2. XHTML Well-Formed Structure</h3>
+    <p>XHTML requires lowercase tags and strictly closed empty elements like this horizontal rule:</p>
+    <hr /> <!-- Self-closing tag required in XHTML -->
+
+    <hr>
+
+    <!-- CSS Selectors and Insertion Practice -->
+    <h3>3. CSS Selectors Demonstration</h3>
+    <p class="custom-para">this paragraph text will be capitalized automatically using css text-transform.</p>
+    
+    <div id="unique-box">
+        This box is styled using an <b>ID Selector (#unique-box)</b>. It has a unique background and border.
+    </div>
+
+    <p style="color: red; font-size: 18px;">This line uses <b>Inline CSS</b> via the style attribute.</p>
+
+</body>
+</html>

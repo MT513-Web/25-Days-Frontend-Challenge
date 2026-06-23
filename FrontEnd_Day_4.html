@@ -1,0 +1,128 @@
+<!--CSS Links, Lists, Tables, and Box Model (Day 4 Summary)
+- Links States (LVHA): Styled in strict sequential order: a:link, a:visited, a:hover, a:active.
+- text-decoration: none; removes the default underline from anchor <a> tags.
+- CSS Lists: list-style-type alters bullet shapes; list-style-position: inside shifts bullets into the content block.
+- CSS Tables: border-collapse: collapse; eliminates double borders, compressing cells into clean single lines.
+- Box Model Layers: Consists of Content (inner text), Padding (inner space), Border, and Margin (outer spacing).
+- Padding vs Margin: Padding clears inner area around content (colored); Margin clears outer transparent area outside borders.
+- Outlines: Drawn outside boundaries to make components stand out; does not affect the element's block layout dimensions.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Day 4 Practice - Links, Lists, Tables & Box Model</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcfcfc;
+            padding: 20px;
+        }
+
+        /* 1. CSS Links Pseudo-classes (Strict LVHA Order) */
+        a:link {
+            color: green;
+            text-decoration: none; /* No underline */
+        }
+        a:visited {
+            color: purple;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+            background-color: lightyellow;
+        }
+        a:active {
+            color: orange;
+        }
+
+        /* 2. CSS Lists Properties */
+        ul.custom-bullets {
+            list-style-type: square;
+            list-style-position: inside; /* Moves the bullet inside the content block */
+        }
+
+        /* 3. CSS Tables - Collapsed Borders */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse; /* Merges double borders into a single sharp line */
+        }
+        th, td {
+            padding: 12px; /* Space between content and the border */
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            background-color: rgb(114, 114, 125);
+            color: rgb(235, 235, 246);
+        }
+
+        /* 4. High-Yield: Box Model Block */
+        .box-model-container {
+            width: 300px;                /* Width of the actual content */
+            padding: 25px;               /* Spacing between content and the border */
+            border: 5px solid navy;      /* Solid structural line around the box */
+            margin: 30px;                /* Distance from this box to other elements */
+            background-color: lightblue;
+        }
+
+        /* 5. Outline Property */
+        .outline-box {
+            border: 2px solid red;
+            outline: green dotted thick; /* Drawn outside the actual border line(also use thin or medium) */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Day 4: Links, Lists, Tables Handling & Box Model</h1>
+    <hr />
+
+    <!-- 1. Links States Practice -->
+    <h3>1. Interactive CSS Links (Hover & Click to Test)</h3>
+    <p>Check this link's states: <a href="https://www.vu.edu.pk" target="_blank">Virtual University of Pakistan</a></p>
+
+    <hr />
+
+    <!-- 2. Lists Custom Markers Practice -->
+    <h3>2. Customized CSS Lists</h3>
+    <ul class="custom-bullets">
+        <li>HTML5 Coding Conventions</li>
+        <li>CSS Box Model Properties</li>
+    </ul>
+
+    <hr />
+
+    <!-- 3. Table Borders Collapse Practice -->
+    <h3>3. Table with Collapsed Borders</h3>
+    <table style="width: 60%;">
+        <caption>Student Enrollment Details</caption>
+        <tr>
+            <th>Course Code</th>
+            <th>Subject Name</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>CS202</td>
+            <td>Front-End Development</td>
+            <td>Active</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <!-- 4. Box Model Practice -->
+    <h3>4. The CSS Box Model Deep Dive</h3>
+    <div class="box-model-container">
+        This inner block visualizes the <b>CSS Box Model</b> components: Content, Padding, Border, and Margin layers.
+    </div>
+
+    <hr />
+
+    <!-- 5. Outline Practice -->
+    <h3>5. Outline Implementation</h3>
+    <p class="outline-box">This text block has a red border and an outer dashed green outline layer.</p>
+
+</body>
+</html>

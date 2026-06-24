@@ -1,0 +1,166 @@
+<!-- 
+  ===========================================================
+  DAY 5: CSS DIMENSIONS, DISPLAY, POSITIONING & FLOATS
+  ===========================================================
+  
+  SUMMARY NOTES:
+  - max-width: Stops an element from growing past a limit, making it responsive.
+  - display: none; completely hides an element and removes its space from the layout.
+  - position: relative; moves an element relative to its normal position without disturbing others.
+  - position: absolute; detaches an element and places it relative to its closest relative parent.
+  - position: fixed; locks an element to the screen window so it stays there during scroll.
+  - float: pushes block elements left/right so text can wrap around them cleanly.
+  - clear: both; stops elements from wrapping around previously floated objects.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 5 Practice - CSS Layouts and Positioning</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            padding: 20px;
+            color: #333;
+            margin-bottom: 500px; /* Temporary space to allow scrolling for the fixed box test */
+        }
+
+        /* 1. CSS Dimensions Layout */
+        .my-custom-box {
+            width: 100%;
+            max-width: 600px; /* Will shrink on small screens but stops expanding at 600px */
+            height: auto;
+            background-color: #e8eaed;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+
+        /* 2. CSS Display Toggle Rules */
+        .block-link {
+            display: block; /* Turns an inline anchor into a full row block button */
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 0;
+            width: 200px;
+        }
+
+        .hidden-box {
+            display: none; /* Completely hidden from view and takes zero structural space */
+        }
+
+        /* 3. CSS Positioning System (Relative vs Absolute Parent-Child) */
+        .parent-relative-box {
+            position: relative; /* Acts as an anchor point for absolute child elements */
+            width: 400px;
+            height: 200px;
+            background-color: #fff;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+
+        .child-absolute-box {
+            position: absolute;
+            bottom: 10px; /* Positioned exactly 10px from the bottom edge of parent */
+            right: 10px;  /* Positioned exactly 10px from the right edge of parent */
+            background-color: #d2e3fc;
+            padding: 8px;
+            border: 1px solid #1a73e8;
+        }
+
+        /* 4. CSS Fixed Layout Positioning */
+        .sticky-screen-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fce8e6;
+            border: 2px solid #d93025;
+            padding: 10px;
+            z-index: 100; /* Stays on top of other layout assets */
+        }
+
+        /* 5. CSS Floating and Clearing Layout Elements */
+        .left-float-column {
+            float: left;
+            width: 30%;
+            background-color: #ceead6;
+            padding: 15px;
+            border: 1px solid #137333;
+        }
+
+        .right-float-column {
+            float: right;
+            width: 30%;
+            background-color: #feefc3;
+            padding: 15px;
+            border: 1px solid #b06000;
+        }
+
+        .clear-footer {
+            clear: both; /* Forces this element to drop below all left or right floated elements */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Day 4 CSS Dimensions & Layout Rules</h1>
+    <hr />
+
+    <!-- Section 1: Fixed vs Responsive Max-Width -->
+    <h3>1. Dimension Boundaries</h3>
+    <div class="my-custom-box">
+        This box handles responsive boundaries. Resize your window to see it shrink safely without overflowing.
+    </div>
+
+    <hr />
+
+    <!-- Section 2: Changing Display Types -->
+    <h3>2. Structural Display Modifiers</h3>
+    <a href="#" class="block-link">Inline Link Made Block</a>
+    <div class="hidden-box">You will never see this content text because display is set to none.</div>
+
+    <hr />
+
+    <!-- Section 3: Absolute positioning within a Relative framework -->
+    <h3>3. Relative and Absolute Coordination Grid</h3>
+    <div class="parent-relative-box">
+        Parent Relative Container
+        <div class="child-absolute-box">
+            Absolute Anchor
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- Section 4: Fixed Viewport Box -->
+    <div class="sticky-screen-box">
+        <b>Fixed Box View:</b> I am stuck right here on the screen viewport regardless of scrolling.
+    </div>
+
+    <!-- Section 5: Floats & Structural Clear Blocks -->
+    <h3>4. Floating Grid Layout Columns</h3>
+    
+    <div class="left-float-column">
+        Left Floating Structural Block Component.
+    </div>
+    
+    <div class="right-float-column">
+        Right Floating Structural Block Component.
+    </div>
+
+    <div class="clear-footer">
+        Clear Layout Footer Component Block.
+    </div>
+
+</body>
+</html>

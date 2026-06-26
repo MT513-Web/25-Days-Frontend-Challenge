@@ -1,0 +1,148 @@
+<!-- 
+    ===========================================================
+    DAY 7: JAVASCRIPT SYNTAX, VARIABLES, OPERATORS & FUNCTIONS
+    ===========================================================
+    
+    SUMMARY NOTES:
+    - <meta name="viewport"> : Controls the page dimensions and scaling to ensure the website looks responsive and fits perfectly on all devices (mobiles, tablets, and desktops).
+    - JavaScript programs consist of statements executed sequentially by the browser . Semicolons separate these statements, allowing multiple actions per line .
+    - White spaces are ignored by JavaScript and are used purely to improve code readability . Long code lines should be broken cleanly after an operator .
+    - Variables act as data containers initialized via the var keyword . Unique variable names (identifiers) must follow strict rules and are case-sensitive .
+    - Arithmetic operators handle math, while the assignment operator stores values . The plus operator adds numbers but concatenates text strings .
+    - Combining different data types like strings and numbers results in automatic type conversion, turning numbers into strings during addition .
+    - Functions pack reusable blocks of code together to perform tasks efficiently without repeating code statements .
+    - Parameters act as internal function placeholders, arguments supply the real runtime data values, and return keywords pass data back .
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 JavaScript Fundamentals - Core Execution Workspace</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 25px;
+            background-color: #f5f6fa;
+            color: #2f3640;
+        }
+
+        .workspace-header {
+            text-align: center;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+        }
+
+        .workspace-card {
+            background-color: #ffffff;
+            border: 1px solid #dcdde1;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .card-heading {
+            color: #2980b9;
+            border-bottom: 1px solid #f5f6fa;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .interaction-btn {
+            background-color: #2980b9;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .interaction-btn:hover {
+            background-color: #3498db;
+        }
+
+        .output-marker {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="workspace-header">
+        <h1>JavaScript Programming Core - System Workspace</h1>
+    </div>
+
+    <div class="workspace-card">
+        <h3 class="card-heading">Variable Scope & Core Identifier Initialization</h3>
+        <p>Click the button below to initialize system configuration strings and output variables:</p>
+        <button type="button" class="interaction-btn" onclick="runVariableWorkspace()">Initialize Variables</button>
+        <p id="variable-output-panel" class="output-marker"></p>
+    </div>
+
+    <div class="workspace-card">
+        <h3 class="card-heading">Mathematical Operators & String Concatenation</h3>
+        <p>Trigger execution routines to examine arithmetic logic versus data type casting:</p>
+        <button type="button" class="interaction-btn" onclick="runOperatorWorkspace()">Compute Operations</button>
+        <p id="operator-output-panel" class="output-marker"></p>
+    </div>
+
+    <div class="workspace-card">
+        <h3 class="card-heading">Parameterized Reusable Functions & Computations</h3>
+        <p>Invoke isolated structural routines utilizing argument injection and return values:</p>
+        <button type="button" class="interaction-btn" onclick="runFunctionWorkspace()">Invoke Calculations</button>
+        <p id="function-output-panel" class="output-marker"></p>
+    </div>
+
+    <script>
+        // 1. Function to test basic variables setup
+        function runVariableWorkspace() {
+            var activeStudent = "Amal"; // Stores text string
+            var academicScore = 90;       // Stores a number
+            
+            // Gets the output paragraph by its ID and changes its text
+            var displayPanelNode = document.getElementById("variable-output-panel");
+            displayPanelNode.innerHTML = "System State -> Student: " + activeStudent + " | Core Target: " + academicScore + "%";
+        }
+
+        // 2. Function to test math operators vs text joining
+        function runOperatorWorkspace() {
+            var numericBase = 100;
+            var numericBonus = 50;
+            var mathSum = numericBase + numericBonus; // Standard math: result is 150
+             
+            var fixedStringValue = "100"; // Enclosed in quotes, so it is a string
+            var liveNumericValue = 50;
+            var automaticStringJoin = fixedStringValue + liveNumericValue; // String forces text joining: result is "10050"
+
+            // Displays the math result and string joining result on the screen
+            var calculationPanelNode = document.getElementById("operator-output-panel");
+            calculationPanelNode.innerHTML = "Pure Comparison (100 + 50): " + mathSum +  "<br> String Concatenation ('100' + 50): " + automaticStringJoin;
+        }
+
+        // 3. Reusable function that takes parameters and returns a result
+        function calculatePercentageRatio(securedPoints, absoluteLimit) {
+            var evaluatedRatio = (securedPoints / absoluteLimit) * 100; // Calculates percentage
+            return evaluatedRatio; // Sends the result back to whoever called the function
+        }
+
+        // Function that executes when the calculation button is clicked
+        function runFunctionWorkspace() {
+            var computedResultValue = calculatePercentageRatio(45, 50); // Calls the function with real values (arguments)
+            
+         // Outputs the calculated result on the web screen
+            var executionPanelNode = document.getElementById("function-output-panel");
+            executionPanelNode.innerHTML = "Isolated Function Evaluation Result Value: " + computedResultValue + "% Completed.";
+
+        }
+    </script>
+
+</body>
+</html>

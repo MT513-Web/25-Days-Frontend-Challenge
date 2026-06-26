@@ -21,193 +21,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Frontend Workspace - Core Concepts</title>
+    <title>Day 6 Advanced Frontend Workspace - Core Concepts</title>
 
     <style>
         body {
-            /* Defines the clean font family layout for professional UI look */
             font-family: 'Segoe UI', Arial, sans-serif;
-            /* Applies uniform spacing outside the edges of the webpage body */
             margin: 20px;
-            /* Light grey background canvas color for pleasant contrast ratio */
             background-color: #f4f6f9;
-            /* Charcoal blue text tone variant used across page topography */
             color: #2c3e50;
         }
 
         .main-header {
-            /* Aligns the dashboard page title center-stage inside viewport */
             text-align: center;
-            /* Draws a clean solid divider underneath the title box element */
             border-bottom: 3px solid #2796e0;
-            /* Creates breathing space between text layer and bottom boundary */
             padding-bottom: 10px;
-            /* Pushes down subsequent layout containers to maintain symmetry */
             margin-bottom: 30px;
         }
 
-        /* Structured modular element cards used for clean component groupings */
         .workspace-card {
-            /* Solid white canvas background for the standalone module containers */
             background-color: #ffffff;
-            /* Outlines container grid sections with soft grey frame borders */
             border: 1px solid #dcdde1;
-            /* Smoothly rounds out the sharp layout box edges on all corners */
             border-radius: 6px;
-            /* Inner padding boundary layout keeping nodes from sticking to edges */
             padding: 20px;
-            /* Outer baseline vertical margin spaces to separate rows cleanly */
             margin-bottom: 20px;
-            /* Soft shadow projection for subtle 3D elevation depth effect */
             box-shadow: 0 2px 5px rgba(32, 22, 22, 0.05);
         }
 
         .card-title {
-            /* Blue tint highlight for modular structural card components */
             color: #2980b9;
-            /* Generates fine segregation line beneath section headings */
             border-bottom: 1px solid #f1f2f6;
-            /* Vertical pad to keep baseline clean of structural dividers */
             padding-bottom: 8px;
-            /* Wipes out any native browser block spacing for absolute control */
             margin-top: 0;
         }
 
-        /* ===========================================================
-           MODULE 1: NAVIGATION ARCHITECTURE & LINK PSEUDO-CLASSES
-           =========================================================== */
+        /* 1. Navigation & Link States Practice */
         ul.custom-nav {
-            /* Removes traditional list items bullet markers from unordered list layout */
-            list-style-type: none;
-            /* Wipes clear standard layout list indent spaces globally */
+            list-style-type: none; /* Clears list bullets */
             margin: 0;
             padding: 0;
-            /* Dark structural slate colored canvas block background */
+            overflow: hidden; /* Wraps floated items correctly */
             background-color: #2c3e50;
-            /* Forces the wrapper layout container to adapt fully around float children */
-            overflow: hidden;
-            /* Adds slight radius symmetry on navigation panel frame edges */
             border-radius: 4px;
         }
 
         ul.custom-nav li {
-            /* Shifts active list nodes leftward horizontally into a flat sidebar link lineup */
-            float: left;
+            float: left; /* Horizontal flat grid item layout alignment */
         }
 
         ul.custom-nav li a {
-            /* Widens anchor frame boundary layout so entire tab cell is active and interactive */
-            display: block;
-            /* Standard visible typography color code for anchor tags */
+            display: block; /* Clicking whole element works */
             color: #ffffff;
-            /* Center aligns anchor text dynamically within active boundaries */
             text-align: center;
-            /* Strategic inner padding framework to space out tabs and enhance user experience */
             padding: 12px 20px;
-            /* Wipes default standard underline layout from standard browser hyperlinks */
             text-decoration: none;
         }
 
-        /* Link State Control: Style variant rule for unvisited standard link nodes */
-        ul.custom-nav li a:link { color: #ffffff; }
-        
-        /* Link State Control: Rule styling links that are already logs within browser history */
-        ul.custom-nav li a:visited { color: #bdc3c7; }
-        
-        /* Link State Control: Trigger rule changing colors smoothly on cursor pointer intersection */
-        ul.custom-nav li a:hover { background-color: #34495e; color: #3498db; }
-        
-        /* Link State Control: Active rule changing color layout precisely at the instance of click */
-        ul.custom-nav li a:active { background-color: #e74c3c; }
+        ul.custom-nav li a:link { color: #ffffff; }    /* Unvisited links style */
+        ul.custom-nav li a:visited { color: #bdc3c7; } /* Already visited link click state */
+        ul.custom-nav li a:hover { background-color: #34495e; color: #3498db; } /* Mouse cursor intersection rule */
+        ul.custom-nav li a:active { background-color: #e74c3c; } /* Exact moment of click interaction */
 
-        /* ===========================================================
-           MODULE 2: ADVANCED TEXT RENDERING PSEUDO-ELEMENTS
-           =========================================================== */
+        /* 2. Typography Pseudo-elements */
         p.typography-demo::first-line {
-            /* Converts the initial dynamic text string line into uniform capital letter sizing */
-            font-variant: small-caps;
-            /* Strengthens font weight metrics exclusively for the opening line segment */
+            font-variant: small-caps; /* Forces line text into capital letter variance format */
             font-weight: bold;
-            /* Assigns emerald green tone color code directly onto the styled initial row */
             color: #27ae60;
         }
 
         p.typography-demo::first-letter {
-            /* Maximizes font sizing layer of initial letter to build an elegant drop-cap layout */
-            font-size: 260%;
-            /* High profile red hue code identifier for custom initial character element */
+            font-size: 260%; /* Creates drop-cap font size */
             color: #c0392b;
-            /* Shifts first alphabet to the left margin so trailing lines wrap right up along it */
-            float: left;
-            /* Sets margin buffer space between main tracking character block and normal words */
+            float: left; /* Text wraps around initial character layout frame block */
             margin-right: 6px;
-            /* Enhances structural emphasis metrics of the initial typography character */
             font-weight: bold;
-            /* Normalizes structural height properties to keep initial node aligned cleanly */
             line-height: 1;
         }
 
         p.typography-demo::selection {
-            /* Sets custom vivid background yellow highlight when client selects dynamic data */
-            background-color: #f1c40f;
-            /* Controls contrast foreground visibility layer color during standard cursor text select */
+            background-color: #f1c40f; /* Custom background selection color on user drag click */
             color: #2c3e50;
         }
 
+        /* 3. Image Transbox Opacity Controls */
         .graphic-area {
-            /* Center lines target image placeholders within relative canvas node wraps */
             text-align: center;
-            /* Inner layout margin boundaries to isolate graphic block cells symmetrically */
             padding: 15px;
         }
 
         img.transbox-img {
-            /* Configures base transparency range layout to dim visibility scale to 40% natively */
-            opacity: 0.4;
-            /* Standard layout asset width scaling factor logic rules override */
+            opacity: 0.4; /* Dims target image out to 40% visibility scale natively */
             width: 130px;
-            /* Implements linear timeline transition window for smooth fade adjustments */
             transition: opacity 0.2s linear;
         }
 
         img.transbox-img:hover {
-            /* RESTORES absolute raw image layout transparency visibility to solid scale 100% on hover */
-            opacity: 1.0;
+            opacity: 1.0; /* Restores image to solid visibility on hover */
         }
 
-    
+        /* 4. Attribute Selectors & Split Multi-columns */
         .anchor-zone a[target] {
-            /* Explicitly flags elements matching specified target parameter token logic in bold */
-            font-weight: bold;
+            font-weight: bold; /* Highlights specific links containing a target attribute parameter */
         }
 
         .anchor-zone a[target="_blank"] {
-            /* Controls visual metrics layout exclusively for links target redirection keys */
-            color: #e67e22;
-            /* Appends structured dynamic dash underscore decoration beneath target match links */
+            color: #e67e22; /* Matches links explicitly configured to open new windows */
             border-bottom: 2px dashed #e67e22;
         }
 
         .text-split-layout {
-            /* Auto-segments inner structural block sections into a two column split grid */
-            column-count: 2;
-            /* Specifies gutters width boundary layout separating text blocks columns */
+            column-count: 2; /* Automatically segments blocks structure into a twin column layout split */
             column-gap: 25px;
-            /* Constructs fine separation rule boundary layout divider column line frames */
-            column-rule: 1px solid #dcdde1;
+            column-rule: 1px solid #dcdde1; /* Border rule strip line separating columns */
         }
 
-       
+        /* 5. Print Styles Override Rules Configuration */
         @media print {
             body {
-                /* Defaults printing environment background rendering profile rules canvas to solid white */
                 background: white;
-                /* Transforms layout printing graphics to blue colors format on hardcopy output sheets */
-                color: #0000ff;
+                color: #0000ff; /* Converts hardcopy text to blue ink on paper sheets */
             }
             ul.custom-nav { 
-                /* Completely hides system screen interactive bars elements on physical print copies */
-                display: none; 
+                display: none; /* Hides web interactive elements on paper print copies completely */
             }
         }
     </style>
@@ -247,7 +181,7 @@
         <h3 class="card-title">04. Attribute Selectors & Fragment Snippets</h3>
         <div class="anchor-zone">
             <p>• Local Redirection Link: <a href="#local">Internal Scope Anchor</a> (Inherits standard typography style)</p>
-            <p>• External Routing Link: <a href="https://google.com" target="_blank">Launch External Portal Window</a> (Targeted and styled via custom attribute selection)</p>
+            <p>• External Routing Link: <a href="https://google.com" target="_blank">Launch External Portal Window</a> (Targeted via custom attribute selection)</p>
         </div>
         <hr>
         <div class="text-split-layout">
@@ -258,24 +192,16 @@
     <div class="workspace-card">
         <h3 class="card-title">05. Client-Side Programming Architecture Intro</h3>
         <p>Invoke core document framework execution logic updates directly through an interactive button click:</p>
-        
         <button type="button" onclick="triggerClientScript()" style="background-color: #2980b9; color: white; border: none; padding: 10px 16px; border-radius: 4px; font-weight: bold; cursor: pointer;">
             Execute Workspace Logic
         </button>
-        
         <p id="workspace-dom-target" style="margin-top: 15px; color: #27ae60; font-weight: bold;"></p>
     </div>
 
     <script>
-        /**
-         * Foundational client script invoked natively during runtime click actions.
-         * Selects specific layout anchors to execute responsive updates inside page frameworks.
-         */
+        // Simple functional runtime check mapping DOM adjustments
         function triggerClientScript() {
-            // document.getElementById targets workspace nodes to switch innerHTML context on the fly
             var activeTargetNode = document.getElementById("workspace-dom-target");
-            
-            // Replaces internal node text data configurations programmatically at runtime point
             activeTargetNode.innerHTML = "Program Execution Verified! Timestamp: " + new Date();
         }
     </script>

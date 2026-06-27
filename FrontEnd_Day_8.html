@@ -1,0 +1,142 @@
+<!--
+===========================================================
+DAY 8: JAVASCRIPT ASSIGNMENT, COMPARISON & CONDITIONAL LOGIC
+===========================================================
+
+SUMMARY NOTES:
+- JavaScript compound assignment operators like += and -= serve as efficient shorthand rules to update and re-assign numerical values instantly.
+- The loose equality operator (==) performs automatic type conversion, checking only values while completely ignoring underlying data types.
+- The strict equality operator (===) enforces highly secure programming logic by validating that both the data value and type match exactly.
+- Logical operators like AND (&&) and OR (||) evaluate multiple complex conditions together to control core program execution pathways.
+- Conditional statements using if, else if, and else parameters branch website logic dynamically based on runtime true or false values.
+- The ternary operator (? :) acts as a streamlined inline shortcut that compresses standard binary if-else code blocks into a single returning line.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - Simple JavaScript Workspace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f5f6fa;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #e67e22;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .intro-text {
+            color: #555555;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 5px 0 15px 0;
+        }
+        .result-text {
+            font-weight: bold;
+            color: green;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Day 8 Challenges</h1>
+
+    <!-- 1. Assignment Operators Section -->
+    <div class="box">
+        <h3>1. Operators (+=, -=, *=)</h3>
+        <p class="intro-text">This section updates variable values using math shorthand shortcuts without rewriting variable names.</p>
+        <button onclick="calculator()">Run Math</button>
+        <p id="output1" class="result-text"></p>
+    </div>
+
+    <!-- 2. Comparison Section -->
+    <div class="box">
+        <h3>2. Compare (== vs ===)</h3>
+        <p class="intro-text">This section verifies soft equality matching against absolute values and exact data type rules.</p>
+        <button onclick="compare()">Run Check</button>
+        <p id="output2" class="result-text"></p>
+    </div>
+
+    <!-- 3. If-Else & Ternary Section -->
+    <div class="box">
+        <h3>3. If-Else and Ternary Shortcut</h3>
+        <p class="intro-text">This section tests multi-line conditional pathways versus simple single-line decision shortcuts.</p>
+        <button onclick="checkConditions()">Run Decisions</button>
+        <p id="output3" class="result-text"></p>
+    </div>
+
+    <script>
+        // Function 1: Evaluates and tracks arithmetic shorthand states step-by-step
+        function calculator() {
+            var score = 10;
+            var step1 = "Starting Score: " + score;
+            
+            score += 5;  
+            var step2 = "After += 5: " + score;
+            
+            score -= 2;  
+            var step3 = "After -= 2: " + score;
+            
+            score *= 2;  
+            var step4 = "After *= 2 (Final Answer): " + score;
+
+            // Renders all mathematical execution stages to the screen using line breaks
+            document.getElementById("output1").innerHTML = 
+                step1 + "<br>" + 
+                step2 + "<br>" + 
+                step3 + "<br>" + 
+                step4;
+        }
+
+        // Function 2: Evaluates loose equality against strict type checking parameters
+        function compare() {
+            var num = 5;
+            var text = "5";
+
+            var check1 = (num == text);   
+            var check2 = (num === text);  
+
+            document.getElementById("output2").innerHTML = 
+                "Using Loose Equality == (Value Match): " + check1 + "<br>" + 
+                "Using Strict Equality === (Type Match): " + check2;
+        }
+
+        // Function 3: Processes standard multi-line branching versus compressed ternary shortcuts
+        function checkConditions() {
+            var gpa = 3.36;
+            var resultText = "";
+
+            // Standard branching execution matrix
+            if (gpa >= 3.0) {
+                resultText = "Dean's List Placement";
+            } else {
+                resultText = "Good Standing";
+            }
+
+            // Inline ternary resolution shortcut statement
+            var status = (gpa >= 3.0) ? "Access Granted" : "Review Required";
+
+            document.getElementById("output3").innerHTML = 
+                "Standard If-Else Flow Result: " + resultText + "<br>" + 
+                "Compressed Inline Ternary Result: " + status;
+        }
+    </script>
+
+</body>
+</html>

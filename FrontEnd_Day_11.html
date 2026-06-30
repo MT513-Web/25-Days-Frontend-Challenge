@@ -1,0 +1,67 @@
+<!--
+===========================================================
+DAY 11: FUNCTIONS WITH PARAMETERS AND RETURN VALUES
+===========================================================
+
+SUMMARY NOTES:
+- Parameters act as local placeholder variables within the function declaration scope.
+- Arguments are the actual runtime data values passed into the function during invocation.
+- The return statement stops function execution immediately and delivers the computed value back to the caller.
+- Any code placed directly below an executed return statement becomes unreachable and will not run.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - Parameterized Functions & Return States</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f5f6fa; }
+        .box { background-color: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #e67e22; color: white; padding: 8px 15px; border: none; cursor: pointer; }
+        .result-text { font-weight: bold; color: green; margin-top: 15px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Day 11</h1>
+
+    <div class="box">
+        <h3>Topic Covered: Parameterized Functions &amp; Return Mechanisms</h3>
+        <p style="color: #555;">Click the button to pass data arguments into a processing function and trace the return data flow live.</p>
+        <button onclick="displayAnalysis()">Process Architecture</button>
+        <p id="functional-output" class="result-text"></p>
+    </div>
+
+    <script>
+        // Reusable parameterized function that processes inputs and returns a structured string
+        function calculateStatus(cgpaValue, creditHours) {
+            // Processing inputs locally within parameter scope
+            var statusMessage = "CGPA: " + cgpaValue + " with " + creditHours + " Credits processed.";
+            
+            return statusMessage; 
+
+            // Dead Code Zone: This line will never execute because it is below the return statement
+            var unreachableData = "This will never be printed";
+        }
+
+        // Main execution function handling the UI interaction and tracing
+        function displayAnalysis() {
+            var inputCGPA = 3.36;
+            var inputCredits = 90;
+
+            // Invoking function by passing explicit data arguments and catching the returned result
+            var trackingOutput = calculateStatus(inputCGPA, inputCredits);
+
+            // Verifying the execution path on screen
+            document.getElementById("functional-output").innerHTML = 
+                "Step 1 - Sending Arguments to Function: (" + inputCGPA + ", " + inputCredits + ")<br>" +
+                "Step 2 - Function Parameters Initialized Successfully.<br>" +
+                "Step 3 - Executing return statement (Terminating function block)<br><br>" +
+                "Final Retrieved Output -> " + trackingOutput;
+        }
+    </script>
+
+</body>
+</html>
